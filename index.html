@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>EVERYDAY WARRIORS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+  <div class="header-container">
+<a href="https://youtube.com/@mrtallharshthakur?feature=shared">
+  <img src="https://i.ibb.co/3mFtvqGb/20250130-015220.png" alt="Logo" class="logo">
+</a>
+    <a href="payment.html" class="btn">Join Now</a>
+  </div>
+</header>
+  <!-- Hero Section -->
+  <section class="video-section">
+  <h2 class="video-heading">WATCH NOW!</h2>
+  <div class="video-container">
+    <iframe class="course-video" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</section>
+ 
+  
+  <hr class="thin-border">
+<h2 class="features-heading">WHY JOIN THE EVERYDAY WARRIORS</h2>
+
+<!-- Thin Border after heading -->
+<hr class="thin-border">
+
+<!-- Feature Cards -->
+<div class="features-container">
+    <!-- Feature Card 1 -->
+    <div class="feature-card feature-card-1">
+        <p class="feature-text">Weekly Coaching Calls</p>
+    </div>
+    
+    <!-- Feature Card 2 -->
+    <div class="feature-card feature-card-2">
+        <p class="feature-text">Private Community</p>
+    </div>
+    
+    <!-- Feature Card 3 -->
+    <div class="feature-card feature-card-3">
+        <p class="feature-text">Influencer-Powered Collaborations!</p>
+    </div>
+    
+  
+</div>
+<!-- Thin Border after Feature Cards -->
+<hr class="thin-border">
+<!-- Video Section -->
+<section class="segment">
+        <h2 class="features-headingg" style="color: red">Why Choose Me?</h2>          <br>
+        <section class="fitness-section">
+    <hr class="thin-border">
+    <h3 class="features-headinggg">FITNESS JOURNEY</h3> <hr class="thin-border">
+    
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide"><img src="https://i.ibb.co/qMVQgQ6y/20250212-015432.jpg" alt="Image 1"></div>
+            <div class="slide"><img src="https://i.ibb.co/9HZ0FwP0/20250212-015331.jpg" alt="Image 2"></div>
+            <div class="slide"><img src="https://i.ibb.co/vCjjL5sf/20250212-015511.jpg" alt="Image 3"></div>
+            <div class="slide"><img src="https://i.ibb.co/G48c7Kxj/20250212-015356.png" alt="Image 4"></div>
+        </div>
+    </div>
+      <section class="description">
+        <p>I was both skinny and fat but transformed myself. With firsthand experience and deep knowledge of workouts, gym, and diet, I can help you do the same!
+</p>
+    </section>
+       </section>
+        
+<hr class="thin-border">
+
+<section class="cta-section">
+  <p class="cta-text" style="color: #d3d3d3;">
+    Ready to make the RIGHT CHOICE?
+  </p>
+  <a href="payment.html" class="btn1">BUY NOW</a><br>
+
+</section>
+
+
+<script>
+   let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+function showSlide() {
+    slides.forEach((slide) => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+    index = (index + 1) % slides.length;
+}
+
+setInterval(showSlide, 3000); // Change image every 3 seconds
+showSlide(); // Show first image immediately
+</script>
+</body>
+</html>
