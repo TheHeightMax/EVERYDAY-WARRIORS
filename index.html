@@ -53,11 +53,7 @@
 <hr class="thin-border">
 <!-- Video Section -->
 <section class="segment">
-        <h2 class="features-headingg" style="color: red">Why Choose Me?</h2>          <br>
-        <section class="fitness-section">
-    <hr class="thin-border">
-    <h3 class="features-headinggg">FITNESS JOURNEY</h3> <hr class="thin-border">
-    
+        <h2 class="features-headingg" style="color: red">WHAT WE PROVIDE?</h2>          <br>    
     <div class="slider-container">
         <div class="slider">
             <div class="slide"><img src="https://i.ibb.co/qMVQgQ6y/20250212-015432.jpg" alt="Image 1"></div>
@@ -66,12 +62,35 @@
             <div class="slide"><img src="https://i.ibb.co/G48c7Kxj/20250212-015356.png" alt="Image 4"></div>
         </div>
     </div>
-      <section class="description">
-        <p>I was both skinny and fat but transformed myself. With firsthand experience and deep knowledge of workouts, gym, and diet, I can help you do the same!
-</p>
-    </section>
-       </section>
-        
+   <h1 class="fitness-heading">FITNESS GUIDE</h1>
+    <hr class="hellohe">
+    
+     <div class="slider-container">
+    <div class="slider">
+        <div class="slide"><img src="https://i.ibb.co/s9s1LwpZ/20250212-211230.jpg" alt="Image 1"></div>
+        <div class="slide"><img src="https://i.ibb.co/20QjDVLH/20250212-211309.jpg" alt="Image 2"></div>
+        <div class="slide"><img src="https://i.ibb.co/KjX4w4sD/20250212-211256.jpg"         alt="Image 3"></div>
+    </div>
+</div>
+<h1 class="fitness-heading">SOCIAL GUIDE</h1>
+<hr class="hellohe">
+<div class="slider-container">
+    <div class="slider">
+        <div class="slide"><img src="https://i.ibb.co/zTXttCCG/20250212-212640.jpg" alt="Image 1"></div>
+        <div class="slide"><img src="https://i.ibb.co/qLGk35Gn/20250212-213021.jpg" alt="Image 2"></div>
+        <div class="slide"><img src="https://i.ibb.co/27xj4dK2/20250212-213243.png" alt="Image 3"></div>
+    </div>
+</div>
+<h1 class="fitness-heading">BUSINESS GUIDE</h1>
+<hr class="hellohe">
+<div class="slider-container1">
+    <div class="slider1">
+        <div class="slide1"><img src="https://i.ibb.co/WvVKhqhq/vd-Cbz-Rxkmgs-HD.jpg" alt="Image 1"></div>
+        <div class="slide1"><img src="https://i.ibb.co/DHWqvWcp/a8g-JVUDjvc-HD.jpg" alt="Image 2"></div>   
+        </div>
+</div>
+<h1 class="fitness-heading">Collaborations</h1>
+       </section>        
 <hr class="thin-border">
 
 <section class="cta-section">
@@ -84,17 +103,30 @@
 
 
 <script>
-   let slides = document.querySelectorAll(".slide");
-let index = 0;
+   document.querySelectorAll(".slider, .slider1").forEach((slider) => {
+    let slides = slider.querySelectorAll(".slide, .slide1");
+    let index = 0;
 
-function showSlide() {
-    slides.forEach((slide) => slide.classList.remove("active"));
-    slides[index].classList.add("active");
-    index = (index + 1) % slides.length;
-}
+    function showSlide() {
+        slides.forEach((slide) => slide.classList.remove("active"));
+        slides[index].classList.add("active");
+        index = (index + 1) % slides.length;
+    }
 
-setInterval(showSlide, 3000); // Change image every 3 seconds
-showSlide(); // Show first image immediately
+    setInterval(showSlide, 3000);
+    showSlide();
+});
+const hiddenElements = document.querySelectorAll('.features-heading, .features-container, .segment, .fitness-heading, .hellohe, .slider-container, .slider-container1, .cta-section');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, { threshold: 0.3 });
+
+hiddenElements.forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
