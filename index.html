@@ -101,7 +101,10 @@
 
 </section>
 
-
+<footer style="text-align: center; font-size: 10px; color: gray; padding: 10px;">
+<hr style="border: none; border-top: 1px solid rgba(255, 255, 255, 0.2); margin: 10px auto; width: 100%;">   
+<a href="https://theayushthakur7.github.io/My_Portfolio/" target="_blank" style="color: gray; text-decoration: none;"> Made By Ayush Thakur (Click To See)</a>
+</footer>
 <script>
    document.querySelectorAll(".slider, .slider1").forEach((slider) => {
     let slides = slider.querySelectorAll(".slide, .slide1");
@@ -116,7 +119,7 @@
     setInterval(showSlide, 3000);
     showSlide();
 });
-const hiddenElements = document.querySelectorAll('.features-heading, .features-container, .segment, .fitness-heading, .hellohe, .slider-container, .slider-container1, .cta-section');
+const hiddenElements = document.querySelectorAll('.features-heading, .features-container, .segment, .fitness-heading, .hellohe, .slider-container, .slider-container1, .cta-section, footer');
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
